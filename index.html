@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crete+Round">
+    <title>CatMash</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="wrapper">
+        <h1><a href="./index.html" style="text-decoration : none">CatMash</a></h1>
+        <nav>
+          <ul>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="#display">Voir tout les chats</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <section id="main-image">
+      <div class="wrapper">
+        <h2>Qui sera le plus mignon des chats ?</h2>
+        <button class="w3-green"> <a href="#display" class="button-1">Je vote !</a> </button>
+      </div>
+    </section>
+
+    <div id="display" class="container">
+      <p>Regardez toute la galerie de photo de chat et votez celui qui vous plaît le plus !</p>
+
+    <table class="w3-striped w3-table-all table table-bordered w3-round-xlarge" id="tableDisplay">
+      <tr class="w3-hover-light-grey">
+        <th>Chat</th>
+      </tr>
+    </table>
+
+    <div v-for="(display,idx) in gridData">
+      <table class="w3-striped w3-table-all table table-bordered" id="tableDisplay">
+        <tr class="w3-hover-light-grey">
+          <th>
+            <img :src="display.url" height="200px" width="300px" />
+          </th>
+          <th>
+            <div> Votes: {{display.counter}}</div>
+            <button class="w3-button w3-green w3-hover-light-green" v-on:click="count(idx)" v-bind:id="display.id">Vote !</button>
+            <br>
+            <button v-on:click="deleteItem(idx)" class="w3-button w3-red w3-hover-light-red">Supprimer</button>
+            <button v-on:click="sortBy(idx)" class="w3-button w3-grey w3-hover-light-grey">Trier</button>
+          </th>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+    <!-- JS Library-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src = "Cat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+
+    <!-- Design Library-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+  </body>
+</html>

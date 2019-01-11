@@ -1,0 +1,81 @@
+header{
+  height: 120px;
+}
+header h1{
+  float: left;
+  margin-left: 15%;
+  margin-top: 32px;
+  color: #ff7a00;
+}
+header nav{
+  float: right;
+  margin-top: 32px;
+  margin-right: 30%;
+}
+header nav ul li{
+  float: left;
+  display: inline-block;
+}
+header nav ul li:hover{
+  color: #81DAF5;
+}
+header nav ul li a{
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 20px;
+  text-decoration: none;
+}
+.wrapper{
+  width: 100%;
+  margin: 20px;
+  position: relative;
+}
+
+
+
+#display{
+  margin-top: 10%;
+}
+#main-image{
+  height: 780px;
+  background : url('./image/cat-face.png') center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+#main-image h2{
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  padding-top: 20%;
+  padding-left: 5%;
+}
+#main-image button{
+  position: absolute;
+  left : 45%;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 130px;
+}
+#main-image a {
+  text-decoration: none;
+
+}
+#display p{
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+}
+#display tr{
+  font-size: 15px;
+}
+#tableDisplay{
+  width:500px;
+  margin-left : 400px;
+}
+#tableDisplay th button{
+  width: 90%;
+  margin: 5px;
+}
+#tableDisplay th{
+  text-align : center;
+}
